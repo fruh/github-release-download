@@ -6,10 +6,12 @@ grep_exp_down_url=$4
 
 if [ "$1" == "" -o "$2" == "" -o "$3" == "" -o "$4" == "" ]; then
 
-    echo "Usage: $0 git_url version_file dest_file grep_exp_down_url"
+    echo "Usage: $0 user/repo version_file dest_file grep_exp_down_url"
 
     exit 1
 fi
+
+git_url="https://api.github.com/repos/${git_url}/releases/latest"
 
 json_data=`curl -s "$git_url"`
 
