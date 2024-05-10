@@ -38,4 +38,5 @@ else
 
     echo "No new version available, installed \"$old_version\" new \"$new_version\""
 
+    exit 1
 fi
